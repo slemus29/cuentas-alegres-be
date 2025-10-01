@@ -14,7 +14,7 @@ export class UserService {
     createUser(createUserInput: CreateUserInput) {
         const { name, email, role } = createUserInput
         const user = this.userRepository.create({
-            id: uuid(), name, email, role
+            name, email, role
         })
         console.log("holiiii", user)
         return this.userRepository.save(user)
